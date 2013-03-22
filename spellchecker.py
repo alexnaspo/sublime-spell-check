@@ -6,8 +6,6 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "pyenchant"))
 import enchant
 
-# @TODO multiple selection spell check
-
 
 class SpellCheckerCommand(sublime_plugin.TextCommand):
     def __init__(self, view):
