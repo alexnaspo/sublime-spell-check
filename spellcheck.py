@@ -7,7 +7,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "pyenchant"))
 import enchant
 
 
-class SpellCheckerCommand(sublime_plugin.TextCommand):
+class SpellCheckCommand(sublime_plugin.TextCommand):
     def __init__(self, view):
         self.view = view
         self.selection = view.sel()
