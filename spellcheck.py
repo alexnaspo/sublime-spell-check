@@ -1,17 +1,13 @@
 import sublime
 import sublime_plugin
-# current solution to include the third party library PyEnchant
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), "pyenchant"))
-import enchant
+import pyenchant.enchant as enchant
 
 
 class SpellCheckCommand(sublime_plugin.TextCommand):
     def __init__(self, view):
         self.view = view
         self.selection = view.sel()
-        self.dictionary = enchant.Dict()
+        self.dictionary = enchant.Dict("en_US")
 
     def run(self, edit):
         self.edit = edit
