@@ -1,6 +1,9 @@
 import sublime
 import sublime_plugin
-import pyenchant.enchant as enchant
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "pyenchant"))
+import enchant
 
 
 class SpellCheckCommand(sublime_plugin.TextCommand):
